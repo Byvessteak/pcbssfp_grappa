@@ -9,17 +9,17 @@ addpath(genpath('dependencies'))
 addpath(genpath('datasets'))
 
 %% Load kspace data
-data = load("datasets/profiles207to246_allcoils.mat");
-data = data.slices; % TODO: change name to correct data name
+data = load("datasets/.mat"); %needs to be in (x,y,z,coils,phase-cycles)
+data = data.profiles_slice; % TODO: change name to correct data name
 data_msg = 'Data loading DONE \n';
 fprintf(data_msg)
 
 %% Variables to define
 undersampling_y = 2; % undersampling rate in x-direction, default = 2
-undersampling_z = 3; % undersampling rate in y-direction,default = 2
-calib_y = 42; % calibration width in x-direction,default = 84
-calib_z = 36; % calibration width in y-direction,default = 72
-save_data = true; % want to save data?
+undersampling_z = 2; % undersampling rate in y-direction,default = 2
+calib_y = 84; % calibration width in x-direction
+calib_z = 72; % calibration width in y-direction
+save_data = false; % want to save data?
 
 
 %% Create undersampling mask
