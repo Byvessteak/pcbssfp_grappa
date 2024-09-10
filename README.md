@@ -1,7 +1,7 @@
 Acceleration and GRAPPA reconstruction for phase-cycled bSSFP MRI signals
 
 MATLAB-FILES:
-- create_plots.m			to create plots (T1/T2/bSSFP profile) of reconstructed images
+- create_plots.m			to the reconstructed image and fully sampled image side-by-side
 - undersample_data_5D.m	to retrospectivelly undersample multi-slice PC-bSSFP data
 
 PYTHON-FILES:
